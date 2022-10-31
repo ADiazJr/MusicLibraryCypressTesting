@@ -1,5 +1,5 @@
-describe('empty spec', () => {
-  it('passes', () => {
+describe('Edit Button', () => {
+  it('Edits the Title of A Song', () => {
     cy.visit('http://localhost:3000')
     cy.contains('Frontlines')
     .parents('tr')
