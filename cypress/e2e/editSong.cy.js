@@ -1,0 +1,15 @@
+describe('empty spec', () => {
+  it('passes', () => {
+    cy.visit('http://localhost:3000')
+    cy.contains('Frontlines')
+    .parents('tr')
+    .find('button')
+    .contains('Edit')
+    .click()
+    cy.get('.modal-main > form > [name="title"]')
+    .clear()
+    .type('Blame')
+    cy.get('.modal-main > form > button')
+    .click()
+  })
+})
